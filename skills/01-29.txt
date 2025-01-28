@@ -1,0 +1,7 @@
+Practice quiz
+
+1. Use mkdir to make the directories skills/01-29 in your home directory
+2. List the files in /stat129/class/ and save the output to ~/skills/01-29/q2.txt
+
+Run the following to check your work:
+    bash /stat129/class/skills/
