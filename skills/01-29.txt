@@ -1,7 +1,9 @@
 Practice quiz
 
-1. Use mkdir to make the directories skills/01-29 in your home directory
-2. List the files in /stat129/class/ and save the output to ~/skills/01-29/q2.txt
+1. Use mkdir to make the directories skills/ in your home directory.
+2. Create a directory 01-29/ inside the new skills directory.
+3. List the files in /stat129/class/ and save the output to ~/skills/01-29/q3.txt
 
-Run the following to check your work:
-    bash /stat129/class/skills/
+Run (paste into bash) the following to check your work:
+
+    /stat129/class/skills/01-29-check.py
