@@ -2,9 +2,7 @@
 from pathlib import Path
 import filecmp
 
-home = Path.home()
-
-skills = home / "skills"
+skills = Path.home() / "skills"
 if skills.is_dir():
     print("Q1 correct")
 else:

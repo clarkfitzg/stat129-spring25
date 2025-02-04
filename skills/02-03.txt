@@ -1,0 +1,7 @@
+Quiz
+
+1. Use `mkdir` to make the directories skills/ in your home directory.
+	If this directory already exists then no need to do anything.
+2. Make a directory ~/skills/02-03/ 
+3. List the files in /stat129/tax/ and redirect (save) the output to the file ~/skills/02-03/q3.txt
+	Don't use copy paste with the mouse.
