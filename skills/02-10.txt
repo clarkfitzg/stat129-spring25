@@ -1,0 +1,16 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/02-10/ 
+
+1. Run the following two commands in order:
+        cd ~
+        cd ..
+   Now save the name of your working directory
+   in a file ~/skills/02-10/q1.txt
+   Then change your working directory back to home
+
+2. What does the manual say about the `-t` option for the `sort` command?
+   Copy and paste the text into a file ~/skills/02-10/q2.txt
+
+3. Copy all of the files in /stat129/names/ that start with 'bravo' and
+   end with '.txt' into ~/skills/02-10/ 
