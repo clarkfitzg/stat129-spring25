@@ -1,0 +1,29 @@
+Quiz 02-17
+
+0. Use `mkdir` to make a directory ~/skills/02-17/ 
+
+1. How many lines are there in /stat129/diamonds.csv?
+	save the number of lines to the file ~/skills/02-17/q1.csv
+
+2. Select the first 10 lines in /stat129/diamonds.csv 
+	and save them to the file ~/skills/02-17/q2.csv
+
+3. Select all the "price" values (column 7) in /stat129/diamonds.csv 
+	and save them to the file ~/skills/02-17/q3.csv
+	Here's what you want:
+
+"price"
+326
+326
+327
+... etc ...
+
+
+4. Select all the lines in /stat129/diamonds.csv where the string "Ideal" appears
+	and save them to the file ~/skills/02-17/q4.csv
+	Here's what you want:
+
+0.23,"Ideal","E","SI2",61.5,55,326,3.95,3.98,2.43
+0.23,"Ideal","J","VS1",62.8,56,340,3.93,3.9,2.46
+0.31,"Ideal","J","SI2",62.2,54,344,4.35,4.37,2.71
+... etc ...
