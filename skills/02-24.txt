@@ -1,0 +1,25 @@
+Quiz 02-24
+
+0. Use `mkdir` to make a directory ~/skills/02-24/ 
+
+``` # Pipeline:
+od /dev/random | tr -d " " | grep -E -o "20[0-9]{6}" | cut -c5-8 | head -n 10000000 > /dev/null
+```
+
+1. Check out the `htop` screenshot in Canvas page titled 'skills quiz file transfer'.
+	Which command in the above pipeline is the bottleneck?
+	Save the name of the command to the file ~/skills/02-24/q1.txt
+	(You may include or exclude the flags and arguments.)
+
+2. Referring to the above screenshot, do any of the commands in the above pipeline seem
+	to be using a significant amount of memory?
+	Write 'yes' or 'no' in the file ~/skills/02-24/q2.txt
+
+3. Download the file `htop-screenshot-1.pdf` from the above Canvas page.
+	Upload it to the server at ~/skills/02-24/htop-screenshot-1.pdf
+
+4. Make the following command parallel: 
+
+               grep "needle" /stat129/hay/stack*
+
+	Store the results of --dry-run to the file ~/skills/02-24/q4.txt
