@@ -14,6 +14,11 @@ def head(stream, size=10):
     return output
 
 
+# The idea is that everything that follows only runs if we
+# call this program from the command line.
+# Alternatively, we may wish to write the Python code:
+# >>> from head import head
+# and then use the head() function within other Python programs.
 if __name__ == "__main__":
     import sys
 
