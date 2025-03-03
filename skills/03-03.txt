@@ -1,0 +1,23 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/03-03/ 
+
+1.  Call the Python script /stat129/class/python/mean.py
+    by adding it as the last step to this pipeline:
+
+        seq 100 31 1000 | 
+
+    Save the results to the file ~/skills/03-03/q1.txt
+
+2. (Can skip if you have points for file transfer)
+    Download the file `GlobalSummaryTimeSeries-2021.pdf` from the Canvas page titled 'skills quiz file transfer'.
+	Upload it to the server at ~/skills/03-03/GlobalSummaryTimeSeries-2021.pdf
+
+
+3. (Can skip if you have points for parallel)
+    The following command evaluates a bash script, passing in one particular file.
+
+               bash /stat129/class/bash-script-examples/script2.sh /stat129/1750.csv.gz
+
+    Modify it so that it runs in parallel over all the files listed in `ls /stat129/17*.csv.gz`.
+    Save the results of --dry-run to the file ~/skills/03-03/q3.txt
