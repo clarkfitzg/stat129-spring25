@@ -3,12 +3,15 @@
 # Data frames
 import pandas as pd
 
-d = pd.read_csv("station-year-temp.csv")
-
-
 # Plotting interface for data frames
 # similar to R's ggplot2
 import seaborn as sns
+
+
+d = pd.read_csv("station-year-temp.csv")
+d0 = pd.read_csv("station-day-tmin.csv")
+
+# Let's give the stations more d
 
 
 # Returns an axis to plot
