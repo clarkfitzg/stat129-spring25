@@ -8,11 +8,17 @@ import pandas as pd
 import seaborn as sns
 
 
-d = pd.read_csv("station-year-temp.csv")
 d0 = pd.read_csv("station-day-tmin.csv")
 
-# Let's give the stations more d
+# convert TMIN from 10ths celsius to Fahrenheit
+d0["temperature"] = (d0["TMIN"]/10) * 1.8 + 32
 
+
+# preparing to calculate statistics 
+# for each group of station and year
+grouped = d0.groupby(["station", "year"])
+
+d = grouped.median()
 
 # Returns an axis to plot
 ax = sns.lineplot(x = "year",
