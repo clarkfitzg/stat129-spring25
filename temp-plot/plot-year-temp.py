@@ -18,6 +18,7 @@ d0["temperature"] = (d0["TMIN"]/10) * 1.8 + 32
 # for each group of station and year
 grouped = d0.groupby(["station", "year"])
 
+# Calculate the median for each group
 d = grouped.median()
 d = d.reset_index()
 
@@ -26,13 +27,15 @@ def add_anomaly(group):
     group["anomaly"] = group["temperature"] - mintemp
     return group
 
+# Add an anomaly column by applying the add_anomaly
+# function to each station group
 d2 = d.groupby("station").apply(add_anomaly)
 
 # Returns an axis to plot
 ax = sns.lineplot(x = "year",
-                  y = "temperature",
+                  y = "anomaly",
                   hue = "station",
-                  data = d)
+                  data = d2)
 
 # Save the resulting figure
-#ax.figure.savefig("year-temp.pdf")
+ax.figure.savefig("year-temp.pdf")
