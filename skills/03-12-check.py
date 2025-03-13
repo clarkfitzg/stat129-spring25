@@ -13,9 +13,8 @@ from pathlib import Path
 
 from IPython.core.debugger import set_trace
 
+from mystery import mystery_number
 
-def run(fname):
-    exec(open(fname).read())
 
 
 def score(name, standards):
@@ -25,7 +24,6 @@ def score(name, standards):
     result["name"] = name
 
     d = Path("/home/{}/skills/03-12".format(name))
-    run("/stat129/class/python/mystery.py")
 
     try:
         content = (d / "q1.txt").read_text().strip()
@@ -35,12 +33,25 @@ def score(name, standards):
     except:
         pass
 
+    try:
+        code = open(d / "convert-temp.py").read()
+        code += "\nc40 = c_to_f(40)"
+        exec(code)
+        #if abs(c40 - 104.0) < 1e-8:
+        print(c40)
+        if c40 == 104:
+            result["20-define-function"] = 1
+        #del c_to_f
+    except:
+        pass
+
     set_trace()
     return result
 
 
 standards = """
     19-run-python-interactive
+    20-define-function
 """.split()
 
 if __name__ == "__main__":
