@@ -35,17 +35,14 @@ def score(name, standards):
 
     try:
         code = open(d / "convert-temp.py").read()
-        code += "\nc40 = c_to_f(40)"
         exec(code)
-        #if abs(c40 - 104.0) < 1e-8:
-        print(c40)
+        c40 = locals()["c_to_f"](40)
         if c40 == 104:
             result["20-define-function"] = 1
-        #del c_to_f
     except:
         pass
 
-    set_trace()
+    #set_trace()
     return result
 
 
