@@ -1,0 +1,118 @@
+
+Use `mkdir` to make a directory ~/skills/03-17
+
+
+04-list-files
+05-redirect-output
+----------------------------------------
+List the files in /stat129/ and redirect (save) the output to the file ~/skills/03-17/q4.txt
+
+
+06-navigate-directory
+----------------------------------------
+Run the following two commands in order:
+
+    cd /stat129/class/python/__pycache__
+    cd ..
+
+Now save the name of your working directory
+in a file ~/skills/03-17/q6.txt
+
+
+07-read-man-page
+08-copy-paste
+----------------------------------------
+What does the manual say about the `--html` option for the `xmllint` command?
+Copy and paste the text into a file ~/skills/03-17/q7.txt
+
+
+09-wildcards
+----------------------------------------
+List all of the files in /stat129/scratch/ that start with '2015' and 
+end in '.csv' and redirect the output to ~/skills/03-17/q9.txt
+
+
+10-line-count
+----------------------------------------
+How many lines are there in /stat129/ghcnd-inventory.txt?
+Save the number of lines to the file ~/skills/03-17/q10.txt
+
+
+11
+----------------------------------------
+Select the first 10 lines in /stat129/ghcnd-inventory.txt
+Save them to the file ~/skills/03-17/q11.txt
+
+
+12
+----------------------------------------
+Select all the values in column 7 in /stat129/scratch/86.csv
+Save them to the file ~/skills/03-17/q12.txt
+
+
+13
+----------------------------------------
+Select all the lines in/stat129/ghcnd-stations.txt where the
+string "CHINHAE" appears.
+Save them to the file ~/skills/03-17/q13.txt
+
+
+14-identify-bottleneck
+----------------------------------------
+Check out the `htop` screenshot in Canvas page titled 'htop 3/17'.
+Which command in the above pipeline is the bottleneck?
+Save them to the file ~/skills/03-17/q14.txt
+
+
+15-identify-memory
+----------------------------------------
+Check out the `htop` screenshot in Canvas page titled 'htop 3/17'.
+Do any of the commands in the pipeline seem to be using a significant amount of memory?
+Write 'yes' or 'no' in the file ~/skills/03-17/q15.txt
+
+
+16-transfer-files
+----------------------------------------
+Download the file `16.pdf` from the above Canvas page.
+Upload it to the server at ~/skills/03-17/16.pdf
+
+
+17-parallelize
+----------------------------------------
+Make the following command parallel: 
+
+    wc -l /stat129/hay/stack*
+
+Store the results of the parallel --dry-run to the file ~/skills/03-17/q17.txt
+
+
+18-run-python-script
+----------------------------------------
+Call the Python script /stat129/class/python/sumint.py
+by adding it as the last step to this pipeline:
+
+        seq 100 31 1000 | 
+
+Save the results to the file ~/skills/03-17/q18.txt
+
+
+19-run-python-interactive
+----------------------------------------
+Run the Python script /stat129/class/python/mystery.py
+interactively and see what this code produces:
+
+    mystery_number("stat129")
+
+Save the resulting number to the file ~/skills/03-17/q19.txt
+
+
+20-define-function
+----------------------------------------
+Copy the file /stat129/class/python/emphasize.py to
+/skills/03-17/q20.py and implement the function described.
+
+
+21-fix-python-error
+----------------------------------------
+Copy the file /stat129/class/python/findsac.py to
+~/skills/03-17/q21.py and fix the broken code so that it runs.

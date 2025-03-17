@@ -42,6 +42,15 @@ def score(name, standards):
     except:
         pass
 
+    try:
+        code = open(d / "wc.py").read()
+        exec(code)
+        wca = locals()["wc"]("/stat129/animals.csv")
+        if wca == 8:
+            result["21-fix-python-error"] = 1
+    except:
+        pass
+
     #set_trace()
     return result
 
@@ -49,6 +58,7 @@ def score(name, standards):
 standards = """
     19-run-python-interactive
     20-define-function
+    21-fix-python-error
 """.split()
 
 if __name__ == "__main__":
