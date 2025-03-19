@@ -38,6 +38,9 @@ def findbikes(xmlfile, pattern = r"bicycl| bike "):
     result = {}
 
     try:
+        # ONLY return text and data, not the nodes.
+        # If you return nodes in the tree, then it will break when
+        # we run this in parallel.
         result["mission"] = tree.xpath("/Return/ReturnData/IRS990/ActivityOrMissionDesc/text()")[0]
         result["year"] = int(tree.xpath("/Return/ReturnData/IRS990/FormationYr/text()")[0])
         result["website"] = tree.xpath("/Return/ReturnData/IRS990/WebsiteAddressTxt/text()")[0]
