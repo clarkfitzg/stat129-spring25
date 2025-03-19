@@ -18,6 +18,6 @@ xmllint --html -xpath "//li/a[contains(@href, '.zip')]/text()" /stat129/form-990
 # Or hack away to get the *actual* URL
 # https://stackoverflow.com/questions/11611385/how-can-i-get-the-value-from-an-attribute-using-xmllint-and-xpath#comment47903351_11684170
 
-#xmllint --html -xpath "//li/a[contains(@href, '.zip')]/@href" /stat129/form-990-series-downloads |
-	#sed "s/ href=//" |
-	#tr --delete '"' > urls.txt
+xmllint --html -xpath "//li/a[contains(@href, '.zip')]/@href" /stat129/form-990-series-downloads |
+	sed "s/ href=//" |
+	tr --delete '"' > urls.txt
