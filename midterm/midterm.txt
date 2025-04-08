@@ -1,0 +1,93 @@
+Instructions
+------------------------------------------------------------
+Please write your answers in this document unless otherwise stated.
+If you'd like me to grade partial work, please save it as a file
+with the name of the question and store it in this directory.
+For example, ~/midterm/q1.sh for partial work in question 1.
+
+Each question is worth 4 points.
+There are 5 questions, so 20 points possible.
+There is one extra credit question worth 2 points.
+
+Questions
+------------------------------------------------------------
+
+1.
+------------------------------------------------------------
+There's a station titled "SEOUL CITY" in /stat129/ghcnd-stations.txt.
+How many days in 2020 recorded no rain at this station?
+
+Q1 ANSWER:
+
+
+2.
+------------------------------------------------------------
+Fix the script reservoir.py so that it implements reservoir sampling.
+Verify that it works and passes the tests by running the following:
+
+seq 100 | python3 ~/midterm/reservoir.py
+python3 -m unittest ~/midterm/reservoir.py
+
+
+3.
+------------------------------------------------------------
+Take a peek at the files in /stat129/complaints/
+
+    A) What do these files seem to contain? (One sentence)
+
+    Q3A ANSWER:
+
+    B) How many lines are in all these files?
+
+    Q3B ANSWER:
+
+    C) How large are these files on disk?
+
+    Q3C ANSWER:
+
+
+4.
+------------------------------------------------------------
+
+    A) Look at countvans.sh and see what it does.
+       What minivan seems to have the most complaints?
+
+    Q4A ANSWER:
+
+    B) Make countvans.sh faster by making it parallel and
+       make only a single pass through the data.
+       Save your new faster script as countvans2.sh.
+       How much faster is your new script?
+
+    Q4B ANSWER:
+
+
+5.
+------------------------------------------------------------
+Suppose you want to plot the locations of the rainiest days
+in the year 2000.
+
+    A) What does the following sed command do?
+
+        echo "hello there    student" | sed -E "s/\s+/,/g"
+
+    Q5A ANSWER:
+
+    B) Write a script q5.sh that uses the files tiny-prcp.csv
+       and /stat129/ghcnd-stations.txt to create the file
+       tiny-prcp2.csv, which has the date, precipitation value,
+       latitude, and longitude, sorted by precipitation value.
+       Use the following commands: cut, join, sed, sort
+
+
+6. EXTRA CREDIT
+------------------------------------------------------------
+Generalize the logic from the previous question to extract the data
+for the n rainiest days in North America for an arbitrary year.
+North America has latitude values greater than 15 and longitude
+values less than -60, approximately.
+
+    bash q6.sh 50 /stat129/2010.csv.gz
+
+q6.sh as used above should extract the 50 rainiest days in North America
+from 2010.csv.gz, in the same format as tiny-prcp2.csv

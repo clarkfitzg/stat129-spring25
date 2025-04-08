@@ -35,6 +35,7 @@ def findbikes(xmlfile, pattern = r"bicycl| bike "):
     Find nonprofits related to bicycles, returning None for failures
     """
     tree = etree.parse(xmlfile)
+    # A dictionary holding all the results
     result = {}
 
     try:

@@ -1,0 +1,10 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/04-07/ 
+
+1. Use `xmllint` to find all the CityNm nodes 
+   inside the file /stat129/tax/b.xml
+   Save the resulting XML nodes (with tags) to ~/skills/04-07/q1.out
+
+2. Copy /stat129/class/python/log.py to `~/skills/04-07/log.py`
+   Rewrite the list comprehension using `map`, and assign the result to y2.
