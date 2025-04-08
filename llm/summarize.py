@@ -19,15 +19,35 @@ n = 10
 s990 = random.sample(all990, n)
 
 # Develop a function by starting with just one.
-xmlfile = s990[0]
+xmlfile = s990[1]
 
 tree = etree.parse(xmlfile)
 
-mission = tree.xpath("//ActivityOrMissionDesc/text()")
+# Seems some of the files still have namespaces.
+# Better to just delete that junk so I can better reuse this data in the future.
+# https://stackoverflow.com/questions/4440451/how-to-ignore-namespaces-with-xpath
+# /path/to/*[local-name() = 'somenode']
 
+ein = tree.xpath("//*[local-name() = 'Filer']/*[local-name() = 'EIN']/text()")
+name = tree.xpath("//Filer//BusinessNameLine1Txt/text()")
+
+# From https://stackoverflow.com/questions/721928/xpath-to-select-multiple-tags
+# /a/b/*[self::c or self::d or self::e]
+#mission = tree.xpath("/Return/ReturnData/*[self::ActivityOrMissionDesc or self::MissionDesc or self::Desc]/text()")
+
+# Just paste together all text relating to the mission
+mission = tree.xpath("//ActivityOrMissionDesc/text()")
+mission += tree.xpath("//MissionDesc/text()")
+mission += tree.xpath("//IRS990/Desc/text()")
+# ChatGPT generated, sweet!
+mission += tree.xpath('//SupplementalInformationDetail[FormAndLineReferenceDesc="FORM 990 - ORGANIZATION\'S MISSION"]/ExplanationTxt/text()')
+mission += tree.xpath("//PrimaryExemptPurposeTxt/text()")
+mission += tree.xpath("//DescriptionProgramSrvcAccomTxt/text()")
+
+mission = "\n".join(mission)
 
 # Take the little experiment we had above and build it into a function
-def findbikes(xmlfile, pattern = r"bicycl| bike "):
+def findbikes(xmlfile):
     """
     Find nonprofits related to bicycles, returning None for failures
     """
