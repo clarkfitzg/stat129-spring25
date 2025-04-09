@@ -102,6 +102,8 @@ X2 = np.array([[1, 2, 1, 0, 0, 0, 0, 0, 0],
 X2terms = cv1.inverse_transform(X2)
 
 
-# The TFIDF transformer lets us go back and forth between
-# the document term space and the TFIDF space
-
+# The TFIDF transformer lets us go from
+# the TF space to the TFIDF space.
+# We can't go back though.
+Y = tf1.transform(newdocsX).todense()
+Y2 = tf1.transform(X2).todense()
