@@ -1,0 +1,33 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/04-14/ 
+
+1. Using /opt/anaconda/bin/ipython, run the file /stat129/class/python/transform.py
+   Use `cv` to transform the following new document:
+
+        "Should we trust LLM's?"
+
+   Save the resulting vector as one row in CSV format in ~/skills/04-14/q1.csv 
+   Don't worry about a header row or writing the CSV from Python,
+   just copy and paste from IPython into the CSV file.
+
+   For example, if the input data were "Students tell LLM's everything", then
+    ~/skills/04-14/q1.csv would contain the row:
+
+        0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0
+
+
+2. Building on above, call the inverse transform method on 
+
+        np.array([[0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1]])
+
+   Copy and paste the resulting terms in ~/skills/04-14/q2.txt 
+   For example, if the input were np.array([[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0]]
+    then ~/skills/04-14/q2.txt would contain the text
+
+        do will
+
+
+3. Copy /stat129/class/python/exp_cdf.py to ~/skills/04-14/exp_cdf.py
+   Edit the file to use map() to call the function exp_cdf()
+   on all elements of xx, and assign the result to y.
