@@ -1,7 +1,7 @@
 # /opt/anaconda/bin/ipython
 # ^ run with this ^
 
-# If you're using this script, please clean it up and delete whatever is not essential.
+# Definitely should clean this up before giving it to students!
 
 import csv
 import os

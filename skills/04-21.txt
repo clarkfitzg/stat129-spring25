@@ -1,0 +1,15 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/04-21/ 
+
+1. Copy the file /stat129/class/python/genclusters.py to ~/skills/04-21/genclusters.py
+   Edit the file to:
+        - fit a KMeans model with 3 clusters
+        - predict the clusters for X, and assign these predictions to y2
+
+2. Use /opt/anaconda/bin/ipython to run the file /stat129/class/python/genclusters.py 
+   Use collections.Counter() to count up all the unique values in y (not y2)
+
+   Copy the file /stat129/class/skills/y.csv to ~/skills/04-21/y.csv 
+   Edit ~/skills/04-21/y.csv, replacing the question marks in the second column 
+   with the counts of each value in y.
