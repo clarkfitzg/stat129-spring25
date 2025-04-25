@@ -66,7 +66,7 @@ Just one or two words please, no explanation.
          Mission:
          """
 
-category = [llm(x, prompt, temperature=2) for x in mission]
+category = [llm(x, prompt) for x in mission]
 
 # Add this as a column to our data frame
 women["category"] = category
