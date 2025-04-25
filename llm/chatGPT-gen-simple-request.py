@@ -2,7 +2,7 @@ import requests
 import os
 
 # Path to API key file in home directory
-key_path = os.path.expanduser("~/.llm_api_key")
+key_path = os.path.expanduser("/stat129/llm_api_key")
 
 # Read the key
 try:
