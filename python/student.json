@@ -1,0 +1,33 @@
+{
+  "student_id": "S12345678",
+  "name": {
+    "first": "Emily",
+    "last": "Chen"
+  },
+  "age": 21,
+  "major": "Computer Science",
+  "enrollment": {
+    "year": 2022,
+    "status": "full-time"
+  },
+  "courses": [
+    {
+      "course_id": "CS101",
+      "name": "Intro to Programming",
+      "grades": {
+        "midterm": 88,
+        "final": 92,
+        "assignments": [85, 90, 87]
+      }
+    },
+    {
+      "course_id": "MATH201",
+      "name": "Discrete Mathematics",
+      "grades": {
+        "midterm": 79,
+        "final": 85,
+        "assignments": [80, 75, 78]
+      }
+    }
+  ]
+}

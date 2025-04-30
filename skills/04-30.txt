@@ -1,0 +1,15 @@
+Quiz
+
+0. Use `mkdir` to make a directory ~/skills/04-30/ 
+
+1. Copy the file /stat129/class/python/read-student.py to ~/skills/04-30/read-student.py
+   The data shows that this student scored a 92 on the CS101 final.
+   Edit the file to extract this particular score from the object `student` 
+   and assign it to the variable `cs101final`.
+
+2. Copy the file /stat129/class/llm/simple-request.py to ~/skills/04-30/simple-request.py
+   Change the prompt for the LLM to exactly the following:
+   """
+        List the top 10 technologies for a data scientist. No explanations please.
+   """
+   Run the script and save the result to ~/skills/04-30/q2.txt
